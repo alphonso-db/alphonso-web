@@ -1,0 +1,27 @@
+{
+  "name": "alphonso",
+  "version": "0.0.0",
+  "description": "An open source web based administrative interface for MongoDB",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hegdeashwin/alphonso.git"
+  },
+  "keywords": [
+    "database",
+    "mongodb",
+    "nosql",
+    "framework",
+    "admin",
+    "ui"
+  ],
+  "author": "Ashwin Hegde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hegdeashwin/alphonso/issues"
+  },
+  "homepage": "https://github.com/hegdeashwin/alphonso#readme",
+  "dependencies": {
+    "koa": "^1.0.0",
+    "mongodb": "^2.0.44"
+  }
+}
