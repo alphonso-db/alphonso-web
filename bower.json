@@ -1,0 +1,26 @@
+{
+    "name": "alphonso",
+    "version": "0.0.0",
+    "homepage": "https://github.com/hegdeashwin/alphonso",
+    "authors": [
+        "hegdeashwin <ashwin.hegde3@gmail.com>"
+    ],
+    "dependencies": {
+        "bootstrap": "~3.3.5",
+        "font-awesome": "~4.4.0"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "prod"
+    ],
+    "keywords": [
+        "mongodb",
+        "nosql",
+        "adminui"
+    ],
+    "license": "MIT"
+}
