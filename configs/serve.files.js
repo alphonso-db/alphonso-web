@@ -1,124 +1,80 @@
-{
-	"lint": {
-		"json": {
-			"files": ["./*.json", "./configs/*.json"]
-		},
-		"js": {
-			"rules": "./configs/lints/.jshintrc",
-			"ignore": [],
-			"files": [
-				"./configs/**/*.js",
-				"./client/app/**/*.js",
-				"./client/components/**/*.js",
-				"./install/**/*.js"
-			]
-		},
-		"jscs": {
-			"rules": "./configs/lints/.jscsrc",
-			"files": [
-				"./configs/**/*.js",
-				"./client/app/**/*.js",
-				"./client/components/**/*.js",
-				"./install/**/*.js"
-			]
-		},
-		"css": {
-			"rules": "./configs/lints/.csslintrc",
-			"ignore": [],
-			"files": [
-				"./client/stylesheets/css/**/*.css"
-			]
-		},
-		"html": {
-			"gateway": {
-				"rules": "./configs/lints/.htmlhint-g-rc",
-				"ignore": [],
-				"files": [
-					"./client/index.html"
+(function() {
+	"use strict";
+
+	var development = "./client/";
+	var production = "./client-prod/";
+
+	module.exports = {
+		"lint": {
+			"html": {
+				"gateway": {
+					"src": [development + "*.html"]
+				},
+				"templates": {
+					"src": [
+						development + "templates/**/*.html"
+					]
+				}
+			},
+			"json": {
+				"src": ["./*.json"]
+			},
+			"js": {
+				"src": [
+					"Gulpfile.js",
+					"./config/*.js",
+					development + "app/**/*.js",
+					"./server/**/*.js"
 				]
 			},
-			"templates": {
-				"rules": "./configs/lints/.htmlhint-t-rc",
-				"ignore": [],
-				"files": [
-					"./client/app/**/*.html",
-					"./client/components/**/*.html"
+			"css": {
+				"src": [
+					development + "stylesheets/css/*.css"
 				]
 			}
-		}
-	},
-	"compile": {
-		"less": {
-			"dev": {
-				"options": {
-					"compress": false
-				},
-				"files": {
-					"./client/stylesheets/css/consolidate.css": "./client/stylesheets/less/_consolidate.less"
-				}
-			}
 		},
-		"watch": {
+		"compile": {
 			"less": {
-				"options": {
-					"spawn": false
-				}
-			}
-		}
-	},
-	"build": {
-		"dir": "./client-prod",
-		"browserify": {
-			"options": {},
-			"files": {
-				"src": "./client/app/nodemyadmin.js",
-				"dest": "./client-prod/app/bundle.js"
+				"src": development + "stylesheets/less/_consolidate.less",
+				"dest": development + "stylesheets/css/"
 			}
 		},
-		"uglify": {
-			"options": {
-				"mangle": false,
-				"sourceMap": true,
-				"sourceMapName": "./client-prod/app/sourcemap.map",
-				"compress": {
-					"drop_console": true
+		"build": {
+			"browserify": {
+				"src": development + "main.js",
+				"dest": development + "tmp/"
+			},
+			"minify": {
+				"html": {
+					"src": development + "index.html",
+					"dest": production + ""
 				},
-				"banner": "/*! <%= product.name %> - v<%= product.version %> - */"
+				"js": {
+					"src": development + "tmp/main.js",
+					"dest": production + ""
+				},
+				"css": {
+					"src": development + "stylesheets/css/_consolidate.css",
+					"dest": production + "stylesheets/css/"
+				},
+				"templates": {
+					"src": development + "templates/**/*.html",
+					"dest": production + "templates/"
+				}
 			},
-			"files": {
-				"src": "./client-prod/app/bundle.js",
-				"dest": "./client-prod/app/bundle.min.js"
-			}
-		},
-		"html": {
-			"options": {
-				"removeComments": true,
-				"collapseWhitespace": true
+			"copy": {
+				"assets": {
+					"src": development + "assets/**/*",
+					"dest": production + ""
+				},
+				"bower": {
+					"src": development + "bower_components/**/*",
+					"dest": production + "bower_components/"
+				}
 			},
-			"files": {
-				"./client-prod/index.html": "./client/index.html",
-				"./client-prod/app/signin/signin-tpl.html": "./client/app/signin/signin-tpl.html"
-			}
-		},
-		"css": {
-			"options": {
-				"compress": true
-			},
-			"files": {
-				"./client-prod/stylesheets/css/consolidate.min.css": "./client/stylesheets/less/_consolidate.less"
-			}
-		},
-		"assets": {
-			"files": {
-				"src": "./client/assets/fonts/*",
-				"dest": "./client-prod/assets/fonts/"
+			"clean": {
+				"tmp": development + "tmp/"
 			}
 		}
-	},
-	"tests": {
-		"karma": {
-			"configFile": "./configs/karma.conf.js",
-			"files": "./client/test/**/*.js"
-		}
-	}
-}
+	};
+})();
