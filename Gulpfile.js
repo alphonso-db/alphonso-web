@@ -17,6 +17,7 @@
 		uglifyjs = require('gulp-uglify'),
 		clean = require('gulp-clean'),
 		browserify = require('browserify'),
+		reactify = require('reactify'),
 		source = require('vinyl-source-stream'),
 		buffer = require('vinyl-buffer');
 
@@ -91,6 +92,7 @@
 	 */
 	gulp.task('browserify', function() {
 		return browserify(SERVE_FILES.build.browserify.src)
+			.transform(reactify)
 			.bundle()
 			.pipe(source('main.js'))
 			.pipe(buffer())
