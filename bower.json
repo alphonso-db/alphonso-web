@@ -6,7 +6,6 @@
         "hegdeashwin <ashwin.hegde3@gmail.com>"
     ],
     "dependencies": {
-        "bootstrap": "~3.3.5",
         "font-awesome": "~4.4.0"
     },
     "ignore": [
