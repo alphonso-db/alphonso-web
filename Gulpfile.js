@@ -16,6 +16,7 @@
 		minifyCss = require('gulp-minify-css'),
 		uglifyjs = require('gulp-uglify'),
 		clean = require('gulp-clean'),
+		watch = require('gulp-watch'),
 		browserify = require('browserify'),
 		reactify = require('reactify'),
 		source = require('vinyl-source-stream'),
@@ -167,6 +168,13 @@
 	gulp.task('cleantmp', ['uglifyjs'], function() {
 		return gulp.src(SERVE_FILES.build.clean.tmp)
 			.pipe(clean());
+	});
+
+	/**
+	 * Setup watch task.
+	 */
+	gulp.task('watch', function() {
+		gulp.watch(SERVE_FILES.build.browserify.src, ['build']);
 	});
 
 	/**
