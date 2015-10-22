@@ -1,18 +1,15 @@
 (function() {
 	"use strict";
 
-	var development = "./client/";
-	var production = "./client-prod/";
-
 	module.exports = {
 		"lint": {
 			"html": {
 				"gateway": {
-					"src": [development + "*.html"]
+					"src": ["./client/*.html"]
 				},
 				"templates": {
 					"src": [
-						development + "templates/**/*.html"
+						"./client/templates/**/*.html"
 					]
 				}
 			},
@@ -23,57 +20,57 @@
 				"src": [
 					"Gulpfile.js",
 					"./config/*.js",
-					development + "app/**/*.js",
+					"./client/app/**/*.js",
 					"./server/**/*.js"
 				]
 			},
 			"css": {
 				"src": [
-					development + "stylesheets/css/*.css"
+					"./client/stylesheets/css/*.css"
 				]
 			}
 		},
 		"compile": {
 			"less": {
-				"src": development + "stylesheets/less/_consolidate.less",
-				"dest": development + "stylesheets/css/"
+				"src": "./client/stylesheets/less/_consolidate.less",
+				"dest": "./client/stylesheets/css/"
 			}
 		},
 		"build": {
 			"browserify": {
-				"src": development + "main.js",
-				"dest": development + "tmp/"
+				"src": "./client/main.js",
+				"dest": "./client/tmp/"
 			},
 			"minify": {
 				"html": {
-					"src": development + "index.html",
-					"dest": production + ""
+					"src": "./client/index.html",
+					"dest": "./client-prod/"
 				},
 				"js": {
-					"src": development + "tmp/main.js",
-					"dest": production + ""
+					"src": "./client/tmp/main.js",
+					"dest": "./client-prod/"
 				},
 				"css": {
-					"src": development + "stylesheets/css/_consolidate.css",
-					"dest": production + "stylesheets/css/"
+					"src": "./client/stylesheets/css/_consolidate.css",
+					"dest": "./client-prod/stylesheets/css/"
 				},
 				"templates": {
-					"src": development + "templates/**/*.html",
-					"dest": production + "templates/"
+					"src": "./client/templates/**/*.html",
+					"dest": "./client-prod/templates/"
 				}
 			},
 			"copy": {
 				"assets": {
-					"src": development + "assets/**/*",
-					"dest": production + ""
+					"src": "./client/assets/**/*",
+					"dest": "./client-prod/"
 				},
 				"bower": {
-					"src": development + "bower_components/**/*",
-					"dest": production + "bower_components/"
+					"src": "./client/bower_components/**/*",
+					"dest": "./client-prod/bower_components/"
 				}
 			},
 			"clean": {
-				"tmp": development + "tmp/"
+				"tmp": "./client/tmp/"
 			}
 		}
 	};
