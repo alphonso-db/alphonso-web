@@ -80,8 +80,6 @@
 	 * Setup less compilation task.
 	 */
 	gulp.task('less', function() {
-		console.log("LESS");
-
 		return gulp.src(SERVE_FILES.compile.less.src)
 			.pipe(less())
 			.on('error', gutil.log)
@@ -131,7 +129,7 @@
 	/**
 	 * Setup CSS minification task.
 	 */
-	gulp.task('minifycss', function() {
+	gulp.task('minifycss', ['less'], function() {
 		return gulp.src(SERVE_FILES.build.minify.css.src)
 			.pipe(minifyCss())
 			.pipe(gulp.dest(SERVE_FILES.build.minify.css.dest));
@@ -189,7 +187,7 @@
 	 * 1. Default.
 	 * 2. Minification, optimization & build creation.
 	 */
-	gulp.task('build', ['htmlmin', 'templatesmin', 'minifycss', 'copyassets', 'copybower', 'browserify', 'uglifyjs', 'cleantmp']);
+	gulp.task('build', ['htmlmin', 'templatesmin', 'less', 'minifycss', 'copyassets', 'copybower', 'browserify', 'uglifyjs', 'cleantmp']);
 
 	/**
 	 * Define `linthtml` task

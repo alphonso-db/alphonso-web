@@ -20,6 +20,26 @@
 									<a href="#"><i className="fa fa-home fa-lg"></i></a>
 								</li>
 								<li className="dropdown">
+									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i className="fa fa-eye fa-lg"></i> <span className="caret"></span></a>
+									<ul className="dropdown-menu" role="menu">
+										<li>
+											<a href="#">Collections</a>
+										</li>
+										<li>
+											<a href="#">Find</a>
+										</li>
+										<li>
+											<a href="#">User Account</a>
+										</li>
+										<li>
+											<a href="#">Tables</a>
+										</li>
+										<li>
+											<a href="#">Import</a>
+										</li>
+									</ul>
+								</li>
+								<li className="dropdown">
 									<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i className="fa fa-cogs fa-lg"></i> <span className="caret"></span></a>
 									<ul className="dropdown-menu" role="menu">
 										<li>
@@ -36,6 +56,9 @@
 											<a href="#" target="_blank">API Explorer</a>
 										</li>
 										<li className="divider"></li>
+										<li>
+											<a href="#" target="_blank">Take a Tour</a>
+										</li>
 										<li>
 											<a href="#" target="_blank">Documentation</a>
 										</li>
