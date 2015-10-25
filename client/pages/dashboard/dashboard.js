@@ -3,15 +3,15 @@
 
 	var React = require('react');
 
-	var Header = React.createClass({
+	var Dashboard = React.createClass({
 		render: function() {
 			return (
 				<div>
-					<h1>Header Page</h1>
+					<h1>Dashboard Page</h1>
 				</div>
 			);
 		}
 	});
 
-	module.exports = Header;
+	module.exports = Dashboard;
 })();
