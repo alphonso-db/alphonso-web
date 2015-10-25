@@ -7,6 +7,32 @@
  * all components of the page and use class selectors where appropriate.
  */
 
-body {
-	padding-top: 70px;
+#parent-page-container {
+    padding-left: 250px;
+    height: 100%
+}
+
+#page-sidebar-container {
+    left: 0px;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    z-index: 999;
+}
+
+#child-page-container {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.page-content-header {
+	height: 60px;
+    background: #fff;
+    margin-bottom: 15px;
+    
+    & > div:last-child {
+        padding-right: 0;
+    }
 }

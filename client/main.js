@@ -7,7 +7,7 @@
 	var RouteHandler = Router.RouteHandler;
 
 	Router.run(routes, function(Handler) {
-		React.render(<Handler/>, document.getElementById('page-container'));
+		React.render(<Handler/>, document.getElementById('parent-page-container'));
 	});
 
 })();
