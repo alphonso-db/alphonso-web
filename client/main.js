@@ -2,25 +2,12 @@
 	'use strict';
 
 	var React = require('react');
-	var ReactDOM = require('react-dom');
+	var Router = require('react-router');
+	var routes = require('./router/routes');
+	var RouteHandler = Router.RouteHandler;
 
-	var HrNavbar = React.createFactory(require('./components/navs/hr-nav.jsx'));
-	var Layout = React.createFactory(require('./components/layouts/layout.jsx'));
-	var Alert = React.createFactory(require('./components/alerts/alert.jsx'));
-
-	ReactDOM.render(
-		HrNavbar(),
-		document.getElementById('page-header')
-	);
-
-	ReactDOM.render(
-		Layout(),
-		document.getElementById('page-container')
-	);
-
-	ReactDOM.render(
-		Alert(),
-		document.getElementById('page-alert')
-	);
+	Router.run(routes, function(Handler) {
+		React.render(<Handler/>, document.getElementById('page-container'));
+	});
 
 })();
