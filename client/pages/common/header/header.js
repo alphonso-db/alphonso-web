@@ -35,6 +35,20 @@
 								</ul>
 							</li>
 						</ul>
+
+						<ul className="nav navbar-nav">
+							<li>
+								<form className="navbar-form navbar-right">
+									<div className="input-group">
+										<input type="text" className="form-control" placeholder="Search for..." />
+										<span className="input-group-btn">
+											<button type="submit" className="btn btn-default"><i className="fa fa-search fa-lg"></i></button>
+										</span>
+									</div>
+								</form>
+							</li>
+						</ul>
+
 					  	<ul className="nav navbar-nav navbar-right">
 							<li className="dropdown">
 								<a href="#" className="dropdown-toggle" data-toggle="dropdown">
