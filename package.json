@@ -24,6 +24,7 @@
     "axios": "^0.7.0",
     "bootstrap": "^3.3.5",
     "co": "^4.6.0",
+    "d3": "^3.5.8",
     "elasticsearch": "^8.2.0",
     "flux": "^2.0.3",
     "griddle-react": "^0.2.14",
