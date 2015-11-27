@@ -3,11 +3,11 @@
 
 	module.exports = {
 		"server": {
-			"host": "localhost",
-			"port": 3000
+			"port": "8000",
+			"ip": "127.0.0.1"			
 		},
-		"client": {
-			"staticServe": ""
+		"stack": {
+			"client": "../client-prod"
 		}
 	};
 
