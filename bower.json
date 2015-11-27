@@ -6,6 +6,8 @@
         "hegdeashwin <ashwin.hegde3@gmail.com>"
     ],
     "dependencies": {
+        "jquery": "^2.1.4",
+        "bootstrap": "^3.3.5",
         "font-awesome": "~4.4.0"
     },
     "ignore": [
