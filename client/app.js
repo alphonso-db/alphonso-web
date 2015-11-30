@@ -1,7 +1,6 @@
 (function() {
 	'use strict';
 
-	var $ = require('jquery');
 	var React = require('react');
 	var Header = require('./pages/common/header/header');
 	var Sidebar = require('./pages/common/sidebar/sidebar');
