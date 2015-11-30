@@ -102,7 +102,7 @@
 	/**
 	 * Setup HTML minification task.
 	 */
-	gulp.task('htmlmin', function() {
+	gulp.task('htmlmin', ['cleanProd'], function() {
 		return gulp.src(SERVE_FILES.build.minify.html.src)
 			.pipe(htmlmin(SERVE_RULES.build.rules.html))
 			.pipe(gulp.dest(SERVE_FILES.build.minify.html.dest));
@@ -111,7 +111,7 @@
 	/**
 	 * Setup HTML Templates minification task.
 	 */
-	gulp.task('templatesmin', function() {
+	gulp.task('templatesmin', ['cleanProd'], function() {
 		return gulp.src(SERVE_FILES.build.minify.templates.src)
 			.pipe(htmlmin(SERVE_RULES.build.rules.html))
 			.pipe(gulp.dest(SERVE_FILES.build.minify.templates.dest));
