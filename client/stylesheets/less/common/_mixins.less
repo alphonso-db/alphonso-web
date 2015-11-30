@@ -1,0 +1,26 @@
+/**
+ * Mixins:
+ *
+ * This file holds all the mixins less variables.
+ */
+
+ // Box shadow
+ .box-shadow(@shadow) {
+   -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+           box-shadow: @shadow;
+ }
+
+ // Box sizing
+ .box-sizing(@boxmodel) {
+   -webkit-box-sizing: @boxmodel;
+      -moz-box-sizing: @boxmodel;
+           box-sizing: @boxmodel;
+ }
+
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+          border-radius: @radius;
+}

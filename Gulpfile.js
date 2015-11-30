@@ -138,7 +138,7 @@
 	/**
 	 * Setup JS minification task.
 	 */
-	gulp.task('uglifyjs', ['browserify'], function() {
+	gulp.task('uglifyjs', ['cleanProd', 'browserify'], function() {
 		return gulp.src(SERVE_FILES.build.minify.js.src)
 			.pipe(uglifyjs())
 			.pipe(gulp.dest(SERVE_FILES.build.minify.js.dest));
@@ -147,7 +147,7 @@
 	/**
 	 * Setup Copy assets task.
 	 */
-	gulp.task('copyassets', function() {
+	gulp.task('copyassets', ['cleanProd'], function() {
 		return gulp.src(SERVE_FILES.build.copy.assets.src)
 			.pipe(gulp.dest(SERVE_FILES.build.copy.assets.dest));
 	});
@@ -155,7 +155,7 @@
 	/**
 	 * Setup Copy bower_components task.
 	 */
-	gulp.task('copybower', function() {
+	gulp.task('copybower', ['cleanProd'], function() {
 		return gulp.src(SERVE_FILES.build.copy.bower.src)
 			.pipe(gulp.dest(SERVE_FILES.build.copy.bower.dest));
 	});
@@ -165,6 +165,22 @@
 	 */
 	gulp.task('cleantmp', ['uglifyjs'], function() {
 		return gulp.src(SERVE_FILES.build.clean.tmp)
+			.pipe(clean());
+	});
+
+	/**
+	 * Setup clean css dir task.
+	 */
+	gulp.task('cleanCSS', ['less', 'csslint', 'uglifyjs'], function() {
+		return gulp.src(SERVE_FILES.build.clean.css)
+			.pipe(clean());
+	});
+
+	/**
+	 * Setup clean prod dir task.
+	 */
+	gulp.task('cleanProd', function() {
+		return gulp.src(SERVE_FILES.build.clean.prod)
 			.pipe(clean());
 	});
 
@@ -180,14 +196,14 @@
 	 * 1. Linting of html, templates, json, js, css.
 	 * 2. Compilation of less files.
 	 */
-	gulp.task('default', ['htmlhint', 'templateshint', 'jsonlint', 'eslint', 'jscs', 'less', 'csslint']);
+	gulp.task('default', ['htmlhint', 'templateshint', 'jsonlint', 'eslint', 'jscs', 'cleanCSS', 'less', 'csslint']);
 
 	/**
 	 * Define `build` task
 	 * 1. Default.
 	 * 2. Minification, optimization & build creation.
 	 */
-	gulp.task('build', ['htmlmin', 'templatesmin', 'less', 'minifycss', 'copyassets', 'copybower', 'browserify', 'uglifyjs', 'cleantmp']);
+	gulp.task('build', ['cleanProd', 'htmlmin', 'templatesmin', 'cleanCSS', 'less', 'minifycss', 'copyassets', 'copybower', 'browserify', 'uglifyjs', 'cleantmp']);
 
 	/**
 	 * Define `linthtml` task
