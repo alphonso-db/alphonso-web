@@ -62,7 +62,7 @@
 			"copy": {
 				"assets": {
 					"src": "./client/assets/**/*",
-					"dest": "./client-prod/"
+					"dest": "./client-prod/assets/"
 				},
 				"bower": {
 					"src": "./client/bower_components/**/*",
@@ -70,7 +70,9 @@
 				}
 			},
 			"clean": {
-				"tmp": "./client/tmp/"
+				"tmp": "./client/tmp/",
+				"css": "./client/stylesheets/css/",
+				"prod": "./client-prod/"
 			}
 		}
 	};
