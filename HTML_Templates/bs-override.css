@@ -100,3 +100,12 @@ footer .navbar-inverse .navbar-text, footer .navbar-inverse .navbar-text a, foot
 .navbar-inverse {
 	background-color: #332C2F;
 }
+
+.subheader .navbar-form {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.breadcrumb {
+  background-color: #ffffff;
+}
