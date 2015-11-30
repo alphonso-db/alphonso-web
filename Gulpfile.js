@@ -79,7 +79,7 @@
 	/**
 	 * Setup less compilation task.
 	 */
-	gulp.task('less', function() {
+	gulp.task('less', ['cleanCSS'],function() {
 		return gulp.src(SERVE_FILES.compile.less.src)
 			.pipe(less())
 			.on('error', gutil.log)
@@ -171,7 +171,7 @@
 	/**
 	 * Setup clean css dir task.
 	 */
-	gulp.task('cleanCSS', ['less', 'csslint', 'uglifyjs'], function() {
+	gulp.task('cleanCSS', function() {
 		return gulp.src(SERVE_FILES.build.clean.css)
 			.pipe(clean());
 	});
