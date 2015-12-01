@@ -1,0 +1,44 @@
+.btn,
+.dropdown-menu,
+.navbar,
+.breadcrumb,
+.pagination,
+.container .jumbotron,
+.container-fluid .jumbotron,
+.alert,
+.progress,
+.list-group-item,
+.panel,
+.modal-content,
+.nav-tabs>li>a,
+.tooltip-inner,
+.popover,
+.panel-group .panel,
+.dropdown-menu,
+.form-control {
+  border-radius: 0;
+}
+
+.btn-primary {
+	background-color: #4b637d;
+}
+
+.btn-success {
+	background-color: #6AA53B;
+}
+
+.navbar-inverse {
+	background-color: #332C2F;
+}
+
+.breadcrumb {
+  background-color: #ffffff;
+}
+
+.tab-pane {
+  padding: 20px 0;
+}
+
+.nav-tabs>li.active {
+  border-top: 2px solid orange;
+}
