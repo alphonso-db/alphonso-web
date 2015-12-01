@@ -33,3 +33,17 @@
 .panel-btn-group {
   margin: -6px 0px 0 5px;
 }
+
+footer .navbar {
+  border: 0px;
+  box-shadow: none;
+  background-image: none;
+}
+
+footer .navbar-text.navbar-right:last-child {
+  margin-right: 45px;
+}
+
+footer .navbar-inverse .navbar-text, footer .navbar-inverse .navbar-text a, footer .navbar-inverse .navbar-text a:hover {
+  color: #ffffff;
+}
