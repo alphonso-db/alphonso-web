@@ -30,6 +30,10 @@
   color: #34465D;
 }
 
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: #4A4649;
+}
+
 .panel-btn-group {
   margin: -6px 0px 0 5px;
 }
