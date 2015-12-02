@@ -15,7 +15,9 @@
 .popover,
 .panel-group .panel,
 .dropdown-menu,
-.form-control {
+.form-control,
+.panel-heading,
+.thumbnail {
   border-radius: 0;
 }
 
@@ -40,5 +42,34 @@
 }
 
 .nav-tabs>li.active {
-  border-top: 2px solid orange;
+  border-top: 2px solid #2CC0B3;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  cursor: pointer;
+  color: #04B4AE;
+}
+
+.jumbotron h1 {
+  font-size: 38px;
+}
+
+.container .jumbotron .alert p {
+  font-size: 14px;
+}
+
+.jumbotron .social-group a {
+  padding: 5px;
+}
+
+.jumbotron p.social-group {
+  margin-top: 25px;
+}
+
+.jumbotron ul {
+    font-size: 21px;
+}
+
+.jumbotron hr {
+    border-color: #c6c6c6;
 }
