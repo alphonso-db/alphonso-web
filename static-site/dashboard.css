@@ -6,6 +6,7 @@
 
 .super-tab-container .nav-tabs>li>a {
   margin-right: 0px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
