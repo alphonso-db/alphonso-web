@@ -1,13 +1,5 @@
-(function() {
-	'use strict';
+import ReactDOM from 'react-dom';
 
-	var React = require('react');
-	var Router = require('react-router');
-	var routes = require('./router/routes');
-	var RouteHandler = Router.RouteHandler;
+import DefinedRoutes from './router/router';
 
-	Router.run(routes, function(Handler) {
-		React.render(<Handler/>, document.getElementById('parent-page-container'));
-	});
-
-})();
+ReactDOM.render(DefinedRoutes, document.getElementById('root-container'));
