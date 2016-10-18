@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 import './Tabs.less';
 import { StyleClassUtils } from '../../utils/styleclass.js';
 
-export class TabList extends React.Component {
-  constructor(props) {
+export default class TabList extends React.Component<any, any> {
+  constructor(props: any) {
     super(props);
 
     this.styleClass = new StyleClassUtils();
@@ -20,17 +20,15 @@ export class TabList extends React.Component {
 
     let tablink = document.getElementById('super-tab');
     let tabContent = document.getElementById('super-tab-content');
-    let i = 0;
+		let self = this;
 
-    var self = this;
-
-    for(; i < tablink.children.length ; i++ ){
+    for(let i = 0; i < tablink.children.length ; i++ ){
       self.styleClass.removeClass(tablink.children[i], 'active');
     }
 
     this.styleClass.addClass(ReactDOM.findDOMNode(SelectedTabPaneLink).parentNode, 'active');
 
-    for(i = 0; i < tabContent.children.length ; i++ ){
+    for(let i = 0; i < tabContent.children.length ; i++ ){
       self.styleClass.removeClass(tabContent.children[i], 'in');
       self.styleClass.removeClass(tabContent.children[i], 'active');
     }

@@ -2,8 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './Footer.less';
 
-export class Footer extends React.Component {
-  render() {
+export default class Footer extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+	}
+
+	render() {
     return (
       <footer>
         <div className="row">

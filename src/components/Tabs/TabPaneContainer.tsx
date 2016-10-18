@@ -1,7 +1,11 @@
 import * as React from 'react';
-import { ClusterTabPane } from '../../views/Cluster/ClusterTabPane';
+import ClusterTabPane from '../../views/Cluster/ClusterTabPane';
 
-export class TabPaneContainer extends React.Component {
+export default class TabPaneContainer extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+	}
+	
   render() {
     return (
       <div id="super-tab-content" className="tab-content">

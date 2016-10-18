@@ -5,8 +5,8 @@ import { Alert } from 'react-bootstrap';
 /**
  * AlertBox class will return React-Bootstrap alert DOM structure.
  */
-export class AlertBox extends React.Component {
-  constructor(props) {
+export default class AlertBox extends React.Component<any, any> {
+  constructor(props: any) {
     super(props);
 
     this.state = {
