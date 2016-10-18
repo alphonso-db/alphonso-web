@@ -1,4 +1,4 @@
-class StyleClassUtils {
+export default class StyleClassUtils {
 
   hasClass(el, className) {
     if (el.classList) {
