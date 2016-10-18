@@ -1,10 +1,21 @@
 {
+	"compileOnSave": true,
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
+		"moduleResolution": "node",
     "target": "es5",
-    "jsx": "react"
-  }
+    "jsx": "react",
+		"removeComments": true,
+		"types": []
+  },
+	"include": [
+    "src/**/*"
+  ],
+	"exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
