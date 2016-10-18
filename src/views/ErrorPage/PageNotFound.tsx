@@ -1,13 +1,9 @@
-'use strict';
-
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
-
+import './PageNotFound.less';
 const pageNotFoundImg = require('../../assets/imgs/page-not-found.png');
 
-import './PageNotFound.less';
-
-class PageNotFound extends React.Component {
+export class PageNotFound extends React.Component {
   render() {
     return (
       <div className="container">
@@ -35,5 +31,3 @@ class PageNotFound extends React.Component {
     );
   }
 }
-
-export default PageNotFound;

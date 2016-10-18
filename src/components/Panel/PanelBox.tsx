@@ -1,9 +1,8 @@
-import React from 'react';
-import classNames from 'classnames';
+import * as React from 'react';
+import { classNames } from 'classnames';
+import './PanelBox.less';
 
-require('./PanelBox.less');
-
-class PanelBox extends React.Component {
+export class PanelBox extends React.Component {
   constructor() {
     super();
 
@@ -57,5 +56,3 @@ class PanelBox extends React.Component {
     );
   }
 };
-
-export default PanelBox;

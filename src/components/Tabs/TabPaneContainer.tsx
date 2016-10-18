@@ -1,10 +1,7 @@
-'use strict';
+import * as React from 'react';
+import { ClusterTabPane } from '../../views/Cluster/ClusterTabPane.jsx';
 
-import React from 'react';
-
-import ClusterTabPane from '../../views/Cluster/ClusterTabPane.jsx';
-
-class TabPaneContainer extends React.Component {
+export class TabPaneContainer extends React.Component {
   render() {
     return (
       <div id="super-tab-content" className="tab-content">
@@ -15,5 +12,3 @@ class TabPaneContainer extends React.Component {
     );
   }
 };
-
-export default TabPaneContainer;

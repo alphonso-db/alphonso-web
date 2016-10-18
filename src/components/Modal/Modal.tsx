@@ -1,11 +1,8 @@
-'use strict';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { StyleClassUtils } from '../../utils/styleclass.js';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import StyleClassUtils from '../../utils/styleclass.js';
-
-class Modal extends React.Component {
-
+export class Modal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,14 +23,6 @@ class Modal extends React.Component {
 		this.styleClass.addClass(ReactDOM.findDOMNode(modalContent), 'in');
 		ReactDOM.findDOMNode(modalContent).style.display = 'block';
   }
-
-  componentDidMount() {
-
-  };
-
-  componentWillUnmount() {
-
-  };
 
   render() {
     return (
@@ -59,6 +48,4 @@ class Modal extends React.Component {
       </div>
     );
   }
-}
-
-export default Modal;
+};

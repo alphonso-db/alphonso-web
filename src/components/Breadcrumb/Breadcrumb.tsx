@@ -1,11 +1,8 @@
-'use strict';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import './Breadcrumb.less';
 
-class Breadcrumb extends React.Component {
+export class Breadcrumb extends React.Component {
   render() {
     return (
       <ol className="breadcrumb">
@@ -13,6 +10,4 @@ class Breadcrumb extends React.Component {
       </ol>
     );
   }
-}
-
-export default Breadcrumb;
+};
