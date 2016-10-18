@@ -1,14 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 
 import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
-import App from '../App.js';
+import App from '../App';
 
-import Dashboard from '../views/Dashboard/Dashboard.jsx';
-import ErrorPage from '../views/ErrorPage/PageNotFound.jsx';
+import Dashboard from '../views/Dashboard/Dashboard';
+import ErrorPage from '../views/ErrorPage/PageNotFound';
 
 const Routes = (
   <Router history={appHistory}>
