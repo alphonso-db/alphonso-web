@@ -1,13 +1,11 @@
-'use strict';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Alert } from 'react-bootstrap';
 
 /**
  * AlertBox class will return React-Bootstrap alert DOM structure.
  */
-class AlertBox extends React.Component {
+export class AlertBox extends React.Component {
   constructor(props) {
     super(props);
 
@@ -35,5 +33,3 @@ class AlertBox extends React.Component {
     }
   }
 };
-
-export default AlertBox;

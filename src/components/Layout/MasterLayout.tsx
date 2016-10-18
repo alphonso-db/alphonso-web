@@ -1,13 +1,10 @@
-'use strict';
+import * as React from 'react';
+import { AlertBox } from '../Alert/AlertBox.jsx';
+import { Dashboard } from '../../views/Dashboard/Dashboard.jsx';
+import { Breadcrumb } from '../Breadcrumb/Breadcrumb.jsx';
+import { Footer } from '../Footer/Footer.jsx';
 
-import React from 'react';
-
-import AlertBox from '../Alert/AlertBox.jsx';
-import Dashboard from '../../views/Dashboard/Dashboard.jsx';
-import Breadcrumb from '../Breadcrumb/Breadcrumb.jsx';
-import Footer from '../Footer/Footer.jsx';
-
-class MasterLayout extends React.Component {
+export class MasterLayout extends React.Component {
   render() {
     return (
       <div className="container">
@@ -24,5 +21,3 @@ class MasterLayout extends React.Component {
     );
   }
 };
-
-export default MasterLayout;

@@ -1,11 +1,8 @@
-'use strict';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import './Footer.less';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-require('./Footer.less');
-
-class Footer extends React.Component {
+export class Footer extends React.Component {
   render() {
     return (
       <footer>
@@ -24,5 +21,3 @@ class Footer extends React.Component {
     );
   }
 };
-
-export default Footer;

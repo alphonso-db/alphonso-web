@@ -1,14 +1,10 @@
-'use strict';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Link } from 'react-router';
+import './Tabs.less';
+import { StyleClassUtils } from '../../utils/styleclass.js';
 
-require('./Tabs.less');
-
-import StyleClassUtils from '../../utils/styleclass.js';
-
-class TabList extends React.Component {
+export class TabList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -90,5 +86,3 @@ class TabList extends React.Component {
     );
   }
 };
-
-export default TabList;
