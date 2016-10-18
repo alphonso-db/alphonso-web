@@ -3,11 +3,20 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
-  entry: './src/alphonso.js',
+  entry: './src/alphonso.ts',
 
   output: {
     path: './dist/',
     filename: 'alphonso.min.js'
+  },
+
+	/**
+	 * Enable  Enable sourcemaps for debugging webpack's output
+	 */
+  devtool: "source-map",
+
+	resolve: {
+    extensions: ['', '.webpack.js', '.ts', '.tsx', '.js']
   },
 
   plugins: [new HtmlWebpackPlugin({
@@ -16,12 +25,8 @@ var config = {
 
   module: {
     loaders: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['es2015', 'react']
-      }
+      test: /\.tsx?$/,
+			loader: 'ts-loader'
     }, {
       test: /\.(jpg|jpeg|png|gif|svg)$/i,
       loader: 'file'
@@ -33,12 +38,21 @@ var config = {
       loader: 'style-loader!css-loader'
     }, {
       test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      loader: 'url-loader?limit=10000&mimetype=application/font-woff'
     }, {
       test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: "file"
-    }]
-  }
+      loader: 'file'
+    }],
+		preLoaders: [{
+			test: /\.js$/,
+			loader: 'source-map-loader'
+		}]
+  },
+
+	externals: {
+		'react': 'React',
+		'react-dom': 'ReactDOM'
+	}
 };
 
 module.exports = config;
