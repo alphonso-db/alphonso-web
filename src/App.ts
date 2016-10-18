@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 
-import HorizontalNav from './components/Navbar/HorizontalNav.jsx';
-import MasterLayout from './components/Layout/MasterLayout.jsx';
+import HorizontalNav from './components/Navbar/HorizontalNav';
+import MasterLayout from './components/Layout/MasterLayout';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';
@@ -9,7 +9,7 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './stylesheets/common.less';
 import './stylesheets/override.less';
 
-class App extends React.Component {
+export class App extends React.Component {
   render() {
     return (
       <div>
@@ -18,6 +18,4 @@ class App extends React.Component {
       </div>
     );
   }
-}
-
-export default App;
+};

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { AlertBox } from '../Alert/AlertBox.jsx';
-import { Dashboard } from '../../views/Dashboard/Dashboard.jsx';
-import { Breadcrumb } from '../Breadcrumb/Breadcrumb.jsx';
-import { Footer } from '../Footer/Footer.jsx';
+import { AlertBox } from '../Alert/AlertBox';
+import { Dashboard } from '../../views/Dashboard/Dashboard';
+import { Breadcrumb } from '../Breadcrumb/Breadcrumb';
+import { Footer } from '../Footer/Footer';
 
 export class MasterLayout extends React.Component {
   render() {
