@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { StyleClassUtils } from '../../utils/styleclass.js';
 
-export class Modal extends React.Component {
-  constructor(props) {
+export default class Modal extends React.Component<any, any> {
+  constructor(props: any) {
     super(props);
 
     this.styleClass = new StyleClassUtils();

@@ -1,10 +1,14 @@
 import * as React from 'react';
-import { AlertBox } from '../Alert/AlertBox';
-import { Dashboard } from '../../views/Dashboard/Dashboard';
-import { Breadcrumb } from '../Breadcrumb/Breadcrumb';
-import { Footer } from '../Footer/Footer';
+import AlertBox from '../Alert/AlertBox';
+import Dashboard from '../../views/Dashboard/Dashboard';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import Footer from '../Footer/Footer';
 
-export class MasterLayout extends React.Component {
+export default class MasterLayout extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+	}
+
   render() {
     return (
       <div className="container">

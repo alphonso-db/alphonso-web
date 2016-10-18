@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { Link } from 'react-router';
 import './PageNotFound.less';
-const pageNotFoundImg = require('../../assets/imgs/page-not-found.png');
+import pageNotFoundImg from '../../assets/imgs/page-not-found.png';
 
-export class PageNotFound extends React.Component {
+export default class PageNotFound extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+	}
+
   render() {
     return (
       <div className="container">

@@ -3,7 +3,11 @@ import * as ReactDOM from 'react-dom';
 import { IndexLink, Link } from 'react-router';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-export class HorizontalMenu extends React.Component {
+export default class HorizontalMenu extends React.Component<any, any> {
+	constructor(props: any) {
+		super(props);
+	}
+
   render() {
     return (
       <Navbar>

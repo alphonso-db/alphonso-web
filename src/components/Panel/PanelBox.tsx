@@ -2,9 +2,9 @@ import * as React from 'react';
 import { classNames } from 'classnames';
 import './PanelBox.less';
 
-export class PanelBox extends React.Component {
-  constructor() {
-    super();
+export default class PanelBox extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
 
     this.state = {
       'isCollapse': false,
