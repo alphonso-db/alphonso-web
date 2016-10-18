@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 
-import HorizontalNav from './components/Navbar/HorizontalNav.jsx';
-import MasterLayout from './components/Layout/MasterLayout.jsx';
+import HorizontalNav from './components/Navbar/HorizontalNav';
+import MasterLayout from './components/Layout/MasterLayout';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap-theme.min.css';

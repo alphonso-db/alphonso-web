@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ClusterTabPane } from '../../views/Cluster/ClusterTabPane.jsx';
+import { ClusterTabPane } from '../../views/Cluster/ClusterTabPane';
 
 export class TabPaneContainer extends React.Component {
   render() {
