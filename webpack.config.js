@@ -13,7 +13,7 @@ var config = {
 	/**
 	 * Enable  Enable sourcemaps for debugging webpack's output
 	 */
-  devtool: "source-map",
+  // devtool: "source-map",
 
 	resolve: {
     extensions: ['', '.webpack.js', '.ts', '.tsx', '.js']
@@ -27,6 +27,13 @@ var config = {
     loaders: [{
       test: /\.tsx?$/,
 			loader: 'ts-loader'
+    }, {
+			test: /\.js?$/,
+      exclude: /node_modules/,
+      loader: 'babel',
+      query: {
+        presets: ['es2015', 'react']
+      }
     }, {
       test: /\.(jpg|jpeg|png|gif|svg)$/i,
       loader: 'file'

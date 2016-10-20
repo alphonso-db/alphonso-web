@@ -17,7 +17,7 @@ import './stylesheets/override.less';
  * If we wanted to restrict the props and state object to a specific type we would
  * replace any with the type we are expecting.
  */
-export class App extends React.Component<any, any> {
+export default class App extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
   }
