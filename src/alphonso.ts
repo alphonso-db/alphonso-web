@@ -1,5 +1,5 @@
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from "react-dom";
 
-import DefinedRoutes from './router/router';
+import DefinedRoutes from "./router/router";
 
-ReactDOM.render(DefinedRoutes, document.getElementById('root-container'));
+ReactDOM.render(DefinedRoutes, document.getElementById("root-container"));
