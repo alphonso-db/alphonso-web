@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router';
 import './PageNotFound.less';
-import pageNotFoundImg from '../../assets/imgs/page-not-found.png';
 
 export default class PageNotFound extends React.Component<any, any> {
 	constructor(props: any) {
@@ -13,7 +12,6 @@ export default class PageNotFound extends React.Component<any, any> {
       <div className="container">
         <div className="text-center">
           <div className="col-md-12 characters">
-            <img src={pageNotFoundImg} alt="Page Not Found!" />
           </div>
           <div className="col-md-12">
             <h1>Page not found</h1>

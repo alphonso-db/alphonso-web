@@ -10,11 +10,6 @@ var config = {
     filename: 'alphonso.min.js'
   },
 
-	/**
-	 * Enable  Enable sourcemaps for debugging webpack's output
-	 */
-  // devtool: "source-map",
-
 	resolve: {
     extensions: ['', '.webpack.js', '.ts', '.tsx', '.js']
   },
@@ -30,9 +25,9 @@ var config = {
     }, {
 			test: /\.js?$/,
       exclude: /node_modules/,
-      loader: 'babel',
+      loader: 'babel-loader',
       query: {
-        presets: ['es2015', 'react']
+        presets: ['es2015', 'react', 'stage-0', 'stage-1']
       }
     }, {
       test: /\.(jpg|jpeg|png|gif|svg)$/i,
@@ -49,17 +44,8 @@ var config = {
     }, {
       test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       loader: 'file'
-    }],
-		preLoaders: [{
-			test: /\.js$/,
-			loader: 'source-map-loader'
-		}]
-  },
-
-	externals: {
-		'react': 'React',
-		'react-dom': 'ReactDOM'
-	}
+    }]
+  }
 };
 
 module.exports = config;
