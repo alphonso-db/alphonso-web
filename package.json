@@ -7,9 +7,12 @@
     "url": "git+https://github.com/alphonso-db/alphonso-web.git"
   },
   "scripts": {
-    "dev": "webpack -d --watch",
+    "start": "http-server -p 3000",
+    "bundle": "webpack -d --watch",
     "build": "webpack -p",
-    "test": "jest --no-cache --coverage"
+    "test": "jest --no-cache --coverage",
+		"lint": "tslint --config ./tslint.json './src/**/*.ts'",
+		"lint:fix": "tslint --fix './src/**/*.ts'"
   },
   "keywords": [
     "database",
@@ -46,7 +49,7 @@
     "react-widgets": "^3.3.1",
     "redux": "^3.4.0",
     "superagent": "^2.0.0",
-    "typescript": "^2.0.3",
+    "typescript": "^2.1.4",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
@@ -71,6 +74,7 @@
     "eslint-plugin-react": "^5.1.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.15.0",
+    "http-server": "^0.9.0",
     "jest": "^12.1.1",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
@@ -78,6 +82,7 @@
     "redux-devtools": "^3.2.0",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.9.4",
+    "tslint": "^4.2.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14"
   },
