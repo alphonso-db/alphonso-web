@@ -15,6 +15,6 @@ insert_final_newline = true
 trim_trailing_whitespace = false
 
 # Tab indentation (no size specified)
-[{src/**/*.tsx,src/**/*.js,src/**/*.html,server/**/*.js,*.js,*.json}]
+[{src/**/*.tsx,src/**/*.ts,src/**/*.html,server/**/*.ts,*.ts,*.json}]
 indent_style = tab
 indent_size = 2
